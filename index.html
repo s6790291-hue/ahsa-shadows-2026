@@ -11,55 +11,45 @@
         :root { --orange: #FF8C00; --dark: #1a1a1a; --gold-grad: linear-gradient(90deg, #b8860b 0%, #daa520 50%, #b8860b 100%); }
         body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; overflow-x: hidden; text-align: right; }
 
-        /* الهيدر باسم الموقع فقط */
         .main-header { display: flex; height: 85px; background: var(--dark); position: relative; align-items: center; z-index: 1000; }
         .header-decor { position: absolute; right: 0; width: 85%; height: 100%; background: var(--orange); clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%); display: flex; align-items: center; padding-right: 5%; }
         .logo-img { max-height: 55px; border-radius: 8px; margin-left: 15px; }
         .site-name { color: white; font-weight: bold; font-size: 22px; }
 
-        /* السلايدر التلقائي المستقر */
         .slider-container { position: relative; width: 100%; height: 380px; background: #000; overflow: hidden; }
         .myslide { position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease-in-out; }
         .myslide.active { opacity: 1; }
         .myslide img { width: 100%; height: 100%; object-fit: cover; }
-        .arrows { position: absolute; top: 50%; width: 100%; display: flex; justify-content: space-between; transform: translateY(-50%); z-index: 10; pointer-events: none; }
-        .arrow { color: white; font-size: 30px; background: rgba(0,0,0,0.3); padding: 10px 15px; }
 
-        /* شريط الأخبار */
         .ticker { background: var(--gold-grad); color: white; padding: 10px; overflow: hidden; white-space: nowrap; border-bottom: 3px solid var(--orange); }
         .ticker-content { display: inline-block; animation: move 25s linear infinite; font-weight: bold; }
         @keyframes move { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
 
-        /* شبكة الأقسام الـ 9 */
         .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 30px 15px; max-width: 1200px; margin: 0 auto; }
         .card { background: white; border-radius: 12px; overflow: hidden; width: 100%; max-width: 350px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 1px solid #eee; display: flex; flex-direction: column; }
-        .card img { width: 100%; height: 220px; object-fit: cover; }
+        .card a.img-link { display: block; width: 100%; height: 220px; overflow: hidden; }
+        .card img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
+        .card img:hover { transform: scale(1.05); }
+        
         .card-info { padding: 20px; flex-grow: 1; }
         .card-info h3 { border-right: 4px solid var(--orange); padding-right: 10px; margin: 0 0 10px; font-size: 19px; color: var(--dark); }
         .card-info p { color: #666; font-size: 14px; margin-bottom: 12px; line-height: 1.5; }
-        .keywords-tag { font-size: 11px; color: #999; border-top: 1px dashed #eee; padding-top: 10px; margin-top: 10px; }
 
-        /* الأزرار */
-        .btn { display: flex; text-decoration: none; background: var(--dark); border-radius: 8px; color: white; overflow: hidden; margin-top: 15px; }
-        .btn-s { background: var(--orange); padding: 10px 12px; font-weight: bold; }
-        .btn-m { flex: 1; text-align: center; padding: 10px; font-weight: bold; }
+        .btn-group { display: flex; gap: 5px; margin-top: 10px; }
+        .btn { flex: 1; text-decoration: none; padding: 10px; border-radius: 5px; text-align: center; font-weight: bold; font-size: 13px; }
+        .btn-order { background: #25d366; color: white; }
+        .btn-view { background: var(--dark); color: white; }
 
-        /* الفوتر (أسفل الصفحة) */
         .site-footer { background: var(--dark); color: #fff; padding: 40px 20px 20px; border-top: 5px solid var(--orange); }
-        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .footer-section h4 { color: var(--orange); margin-bottom: 15px; border-bottom: 1px solid #444; padding-bottom: 10px; font-size: 18px; }
-        .footer-section ul { list-style: none; padding: 0; }
-        .footer-section ul li { margin-bottom: 10px; font-size: 14px; color: #ccc; border-right: 2px solid #555; padding-right: 10px; }
         .footer-bottom { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #333; font-size: 14px; color: #aaa; }
-        .designer-credit { color: var(--orange); font-weight: bold; text-decoration: none; }
+        .designer-credit { color: var(--orange); font-weight: bold; }
 
-        /* أزرار التواصل العائمة */
         .f-btns { position: fixed; bottom: 20px; left: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 2000; }
-        .fb { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        .fb { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); text-decoration: none; }
         .fb-c { background: #007bff; } .fb-w { background: #25d366; }
         .fb img { width: 30px; }
 
-        @media (max-width: 600px) { .slider-container { height: 280px; } .site-name { font-size: 18px; } }
+        @media (max-width: 600px) { .slider-container { height: 280px; } }
     </style>
 </head>
 <body>
@@ -77,18 +67,9 @@
     </header>
 
     <div class="slider-container">
-        <div class="arrows"><div class="arrow">&gt;</div><div class="arrow">&lt;</div></div>
         <div class="myslide active"><img src="https://i.postimg.cc/1XZWS6mN/5296776303811955484-120.jpg"></div>
         <div class="myslide"><img src="https://i.postimg.cc/yYc66z7p/5285107341525191572_120.jpg"></div>
-        <div class="myslide"><img src="https://i.postimg.cc/43T945C1/5361556363529621692_120.jpg"></div>
         <div class="myslide"><img src="https://i.postimg.cc/SsRTVqZQ/5447603825691790818_121.jpg"></div>
-        <div class="myslide"><img src="https://i.postimg.cc/B6bYNsh0/5447603825691790821-121.jpg"></div>
-        <div class="myslide"><img src="https://i.postimg.cc/260GBJrk/IMG_20251225_WA0026.jpg"></div>
-        <div class="myslide"><img src="https://i.postimg.cc/FszrcJbT/IMG-20260118-WA0026.jpg"></div>
-        <div class="myslide"><img src="https://i.postimg.cc/FKdkxBjC/5285107341525191429_120.jpg"></div>
-        <div class="myslide"><img src="https://i.postimg.cc/PJk6HZXT/5296776303811955496_120.jpg"></div>
-        <div class="myslide"><img src="https://i.postimg.cc/kGVHM98W/5289875884800150546_121.jpg"></div>
-        <div class="myslide"><img src="https://i.postimg.cc/1z6bwyYC/5409136556695555517_120.jpg"></div>
     </div>
 
     <div class="ticker">
@@ -98,123 +79,116 @@
     <section class="grid">
         
         <div class="card">
-            <img src="https://i.postimg.cc/FszrcJbT/IMG-20260118-WA0026.jpg">
+            <a href="tents.html" class="img-link"><img src="https://i.postimg.cc/FszrcJbT/IMG-20260118-WA0026.jpg"></a>
             <div class="card-info">
                 <h3>بيوت الشعر والخيام</h3>
                 <p>تصميم وتجهيز خيام ملكية وتراثية فخمة عازلة للحرارة.</p>
-                <div class="keywords-tag">#بيوت_شعر_الأحساء #خيام_ملكيه #مجالس_تراثية</div>
-                <a href="https://wa.me/966544459478" class="btn"><span class="btn-s">اطلب</span><span class="btn-m">تصميم خيمة</span></a>
+                <div class="btn-group">
+                    <a href="https://wa.me/966544459478" class="btn btn-order">اطلب الآن</a>
+                    <a href="tents.html" class="btn btn-view">عرض النماذج</a>
+                </div>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://i.postimg.cc/43T945C1/5361556363529621692_120.jpg">
+            <a href="car-umbrellas.html" class="img-link"><img src="https://i.postimg.cc/43T945C1/5361556363529621692_120.jpg"></a>
             <div class="card-info">
                 <h3>مظلات السيارات</h3>
                 <p>تركيب مظلات PVC وبولي إيثيلين وكابولي بأشكال عصرية.</p>
-                <div class="keywords-tag">#مظلات_سيارات_الأحساء #مظلات_pvc #مظلات_هرمية</div>
-                <a href="https://wa.me/966544459478" class="btn"><span class="btn-s">احجز</span><span class="btn-m">عرض سعر</span></a>
+                <div class="btn-group">
+                    <a href="https://wa.me/966544459478" class="btn btn-order">اطلب الآن</a>
+                    <a href="car-umbrellas.html" class="btn btn-view">عرض النماذج</a>
+                </div>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://i.postimg.cc/yYc66z7p/5285107341525191572_120.jpg">
+            <a href="hangars.html" class="img-link"><img src="https://i.postimg.cc/yYc66z7p/5285107341525191572_120.jpg"></a>
             <div class="card-info">
                 <h3>هناجر ومستودعات</h3>
                 <p>بناء وتشييد هناجر حديدية للمصانع والمخازن بمواصفات أمان.</p>
-                <div class="keywords-tag">#بناء_هناجر #مستودعات_الأحساء #مقاول_حدادة</div>
-                <a href="https://wa.me/966544459478" class="btn"><span class="btn-s">اطلب</span><span class="btn-m">مقاول هناجر</span></a>
+                <div class="btn-group">
+                    <a href="https://wa.me/966544459478" class="btn btn-order">اطلب الآن</a>
+                    <a href="hangars.html" class="btn btn-view">عرض النماذج</a>
+                </div>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://i.postimg.cc/SsRTVqZQ/5447603825691790818_121.jpg">
+            <a href="tile.html" class="img-link"><img src="https://i.postimg.cc/SsRTVqZQ/5447603825691790818_121.jpg"></a>
             <div class="card-info">
                 <h3>أعمال القرميد</h3>
                 <p>تركيب قرميد معدني وفخاري إيطالي وإسباني للفلل والملاحق.</p>
-                <div class="keywords-tag">#قرميد_الأحساء #تركيب_قرميد #عوازل_اسطح</div>
-                <a href="https://wa.me/966544459478" class="btn"><span class="btn-s">اطلب</span><span class="btn-m">سعر المتر</span></a>
+                <div class="btn-group">
+                    <a href="https://wa.me/966544459478" class="btn btn-order">اطلب الآن</a>
+                    <a href="tile.html" class="btn btn-view">عرض النماذج</a>
+                </div>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://i.postimg.cc/FKdkxBjC/5285107341525191429_120.jpg">
+            <a href="pergolas.html" class="img-link"><img src="https://i.postimg.cc/FKdkxBjC/5285107341525191429_120.jpg"></a>
             <div class="card-info">
                 <h3>برجولات وجلسات</h3>
                 <p>أحدث البرجولات الحديدية والخشبية لتنسيق الحدائق والأسطح.</p>
-                <div class="keywords-tag">#برجولات_الأحساء #جلسات_خارجية #برجولات_مودرن</div>
-                <a href="https://wa.me/966544459478" class="btn"><span class="btn-s">صمم</span><span class="btn-m">جلستك الآن</span></a>
+                <div class="btn-group">
+                    <a href="https://wa.me/966544459478" class="btn btn-order">اطلب الآن</a>
+                    <a href="pergolas.html" class="btn btn-view">عرض النماذج</a>
+                </div>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://i.postimg.cc/PJk6HZXT/5296776303811955496_120.jpg">
+            <a href="Screens.html" class="img-link"><img src="https://i.postimg.cc/PJk6HZXT/5296776303811955496_120.jpg"></a>
             <div class="card-info">
                 <h3>سواتر وموانع رؤية</h3>
                 <p>تركيب سواتر شرائح ومجدول لزيادة خصوصية منزلك وحمايته.</p>
-                <div class="keywords-tag">#سواتر_الأحساء #سواتر_حديد #خصوصية_منزلية</div>
-                <a href="https://wa.me/966544459478" class="btn"><span class="btn-s">احمِ</span><span class="btn-m">خصوصيتك</span></a>
+                <div class="btn-group">
+                    <a href="https://wa.me/966544459478" class="btn btn-order">اطلب الآن</a>
+                    <a href="Screens.html" class="btn btn-view">عرض النماذج</a>
+                </div>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://i.postimg.cc/kGVHM98W/5289875884800150546_121.jpg">
+            <a href="gardens.html" class="img-link"><img src="https://i.postimg.cc/kGVHM98W/5289875884800150546_121.jpg"></a>
             <div class="card-info">
                 <h3>تنسيق حدائق</h3>
                 <p>تركيب العشب الصناعي والجداري وتصميم شلالات ونوافير.</p>
-                <div class="keywords-tag">#تنسيق_حدائق_الأحساء #عشب_صناعي #شلالات</div>
-                <a href="https://wa.me/966544459478" class="btn"><span class="btn-s">ابدأ</span><span class="btn-m">تنسيق الحديقة</span></a>
+                <div class="btn-group">
+                    <a href="https://wa.me/966544459478" class="btn btn-order">اطلب الآن</a>
+                    <a href="gardens.html" class="btn btn-view">عرض النماذج</a>
+                </div>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://i.postimg.cc/1z6bwyYC/5409136556695555517_120.jpg">
+            <a href="decor.html" class="img-link"><img src="https://i.postimg.cc/1z6bwyYC/5409136556695555517_120.jpg"></a>
             <div class="card-info">
                 <h3>بديل الخشب والرخام</h3>
-                <p>تركيب ديكورات داخلية وخارجية (بديل خشب ورخام) بلمسة عصرية.</p>
-                <div class="keywords-tag">#ديكورات_الأحساء #بديل_الخشب #بديل_الرخام</div>
-                <a href="https://wa.me/966544459478" class="btn"><span class="btn-s">جدد</span><span class="btn-m">ديكور منزلك</span></a>
+                <p>تركيب ديكورات داخلية وخارجية بلمسة عصرية بالأحساء.</p>
+                <div class="btn-group">
+                    <a href="https://wa.me/966544459478" class="btn btn-order">اطلب الآن</a>
+                    <a href="decor.html" class="btn btn-view">عرض النماذج</a>
+                </div>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://i.postimg.cc/260GBJrk/IMG_20251225_WA0026.jpg">
+            <a href="fence.html" class="img-link"><img src="https://i.postimg.cc/260GBJrk/IMG_20251225_WA0026.jpg"></a>
             <div class="card-info">
                 <h3>شبوك مزارع وحماية</h3>
                 <p>تسوير المزارع والأراضي والكسارات بشبوك قوية ومجلفنة.</p>
-                <div class="keywords-tag">#شبوك_مزارع #تسوير_اراضي #شبوك_حماية</div>
-                <a href="https://wa.me/966544459478" class="btn"><span class="btn-s">اطلب</span><span class="btn-m">تسوير شبوك</span></a>
+                <div class="btn-group">
+                    <a href="https://wa.me/966544459478" class="btn btn-order">اطلب الآن</a>
+                    <a href="fence.html" class="btn btn-view">عرض النماذج</a>
+                </div>
             </div>
         </div>
 
     </section>
 
     <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>ما هي خدماتنا</h4>
-                <ul>
-                    <li>تركيب مظلات السيارات والمسابح والمساجد.</li>
-                    <li>بناء بيوت الشعر والخيام الملكية.</li>
-                    <li>تصميم البرجولات وجلسات الأسطح والحدائق.</li>
-                    <li>تركيب سواتر حديد وشرائح وقماش.</li>
-                    <li>تركيب القرميد، الهناجر، والشبوك الزراعية.</li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>أماكن عملنا</h4>
-                <ul>
-                    <li>الأحساء - الهفوف - المبرز.</li>
-                    <li>الطرف - الجفر - العمران - العيون.</li>
-                    <li>جميع قرى وهجر محافظة الأحساء.</li>
-                    <li>المنطقة الشرقية وكافة مناطق الجوار.</li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>لماذا نحن؟</h4>
-                <p>نقدم أفضل الحلول الهندسية في أعمال المقاولات والحدادة، مع الالتزام بالمواعيد، واستخدام أجود الخامات العالمية بضمان يصل إلى 10 سنوات.</p>
-            </div>
-        </div>
         <div class="footer-bottom">
             تم تصميم الموقع بواسطة <span class="designer-credit">سليمان الحكمي</span> | جميع الحقوق محفوظة لـ مظلات وسواتر الأحساء © 2026
         </div>
@@ -228,7 +202,7 @@
             current = (current + 1) % slides.length;
             slides[current].classList.add('active');
         }
-        setInterval(nextSlide, 3000); // تغيير الصورة كل 3 ثوانٍ
+        setInterval(nextSlide, 3000);
     </script>
 </body>
 </html>
