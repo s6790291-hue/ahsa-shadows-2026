@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تنسيق حدائق الأحساء | عشب صناعي وشلالات 0544459478</title>
+    <style>
+        :root { --green: #2ecc71; --dark: #111; --orange: #FF8C00; }
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: #fff; color: #333; }
+
+        /* الهيدر */
+        header { background: var(--dark); padding: 15px; display: flex; align-items: center; border-bottom: 3px solid var(--green); position: sticky; top: 0; z-index: 1000; }
+        .back-home { background: var(--green); color: white; text-decoration: none; padding: 8px 15px; border-radius: 5px; font-weight: bold; }
+        .site-title { color: white; flex-grow: 1; text-align: center; font-size: 18px; }
+
+        /* السلايدر (بدون فراغات) */
+        .main-slider { width: 100%; height: 350px; position: relative; overflow: hidden; background: #000; }
+        .slide { position: absolute; width: 100%; height: 100%; opacity: 0; transition: 1s ease-in-out; }
+        .slide.active { opacity: 1; }
+        .slide img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
+        /* ترويسة الصفحة */
+        .page-intro { text-align: center; padding: 30px 20px; background: #f0fdf4; }
+        .page-intro h1 { color: #1b5e20; border-bottom: 3px solid var(--green); display: inline-block; padding-bottom: 5px; }
+
+        /* معرض الصور (صورة ثم وصف) */
+        .content-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 0; }
+        .image-block { margin-bottom: 40px; padding-bottom: 20px; text-align: center; border-bottom: 8px solid #f0f0f0; }
+        .image-block img { width: 100%; height: auto; display: block; }
+        
+        .description { font-size: 20px; font-weight: bold; color: var(--dark); margin: 15px 15px 5px; display: block; }
+        .keywords { color: var(--green); font-size: 14px; font-weight: bold; margin: 0 15px 15px; display: block; }
+
+        /* زر الواتساب */
+        .wa-float { position: fixed; bottom: 20px; left: 20px; background: #25d366; color: white; padding: 12px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; z-index: 2000; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+
+        footer { background: var(--dark); color: white; text-align: center; padding: 30px; }
+        
+        @media (max-width: 600px) { .main-slider { height: 250px; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="back-home">🏠 الرئيسية</a>
+        <div class="site-title">مظلات وسواتر وتنسيق حدائق الأحساء</div>
+    </header>
+
+    <div class="main-slider">
+        <div class="slide active"><img src="https://i.postimg.cc/XJ1h0XZs/5289875884800150545-121.jpg"></div>
+        <div class="slide"><img src="https://i.postimg.cc/kGVHM98W/5289875884800150546-121.jpg"></div>
+        <div class="slide"><img src="https://i.postimg.cc/DZwDD1wt/IMG-20260118-WA0010.jpg"></div>
+    </div>
+
+    <div class="page-intro">
+        <h1>تنسيق الحدائق والشلالات</h1>
+        <p>نحول حوش منزلك إلى جنة خضراء بأحدث التصاميم</p>
+    </div>
+
+    <div class="content-container" id="landscape-gallery">
+        </div>
+
+    <a href="https://wa.me/966544459478?text=أريد تنسيق حديقة منزلية" class="wa-float">تواصل واتساب 🟢</a>
+
+    <script>
+        const landscapeImages = [
+            "https://i.postimg.cc/XJ1h0XZs/5289875884800150545-121.jpg", "https://i.postimg.cc/kGVHM98W/5289875884800150546-121.jpg",
+            "https://i.postimg.cc/B67yGt8C/5296776303811955549-121.jpg", "https://i.postimg.cc/d1NXKD7j/5296776303811955550-121.jpg",
+            "https://i.postimg.cc/FRCqQ1f3/5296776303811955551-121.jpg", "https://i.postimg.cc/rmZbLzdW/5296776303811955552-121.jpg",
+            "https://i.postimg.cc/QtYPrVBQ/5296776303811955553-121.jpg", "https://i.postimg.cc/d1NXKD7R/5296776303811955554-121.jpg",
+            "https://i.postimg.cc/vB2jdD1V/5296776303811955561-121.jpg", "https://i.postimg.cc/FRCqQ1fS/5296776303811955562-121.jpg",
+            "https://i.postimg.cc/hjZwqhJX/5296776303811955563-121.jpg", "https://i.postimg.cc/ZRsgh09R/5296776303811955577-121.jpg",
+            "https://i.postimg.cc/0QX3qr6r/5296776303811955579-121.jpg", "https://i.postimg.cc/qRDYdgtq/5296776303811955581-119.jpg",
+            "https://i.postimg.cc/sXg8852x/5375329327215480896-121.jpg", "https://i.postimg.cc/d1VXXG0t/5375329327215480898-119.jpg",
+            "https://i.postimg.cc/1t3TTDz4/5375329327215480899-121.jpg", "https://i.postimg.cc/nzS5tMsF/5375329327215480901-121.jpg",
+            "https://i.postimg.cc/rmZbLzdy/5375329327215480902-121.jpg", "https://i.postimg.cc/rmwbb5pm/5375329327215480903-121.jpg",
+            "https://i.postimg.cc/zB2M13LJ/5375329327215480904-121.jpg", "https://i.postimg.cc/cHLjjfJK/5375329327215480905-121.jpg",
+            "https://i.postimg.cc/Ssx55cK2/5375329327215480908-121.jpg", "https://i.postimg.cc/j5S99yjS/5377619498266988825-120.jpg",
+            "https://i.postimg.cc/fLRFFYb4/5377619498266988826-121.jpg", "https://i.postimg.cc/Kz8VVtYb/5377619498266988827-121.jpg",
+            "https://i.postimg.cc/Y9CVVQSt/5377619498266988828-121.jpg", "https://i.postimg.cc/sXg8852V/5377619498266988829-121.jpg",
+            "https://i.postimg.cc/DZwDD1wt/IMG-20260118-WA0010.jpg", "https://i.postimg.cc/rmwbb5wB/IMG-20260118-WA0011.jpg",
+            "https://i.postimg.cc/bJwMM1wW/IMG-20260118-WA0012.jpg", "https://i.postimg.cc/XJYhh9YP/IMG-20260118-WA0013.jpg",
+            "https://i.postimg.cc/Tw3SSn34/IMG-20260118-WA0014.jpg", "https://i.postimg.cc/cHLjjfLk/IMG-20260118-WA0015.jpg",
+            "https://i.postimg.cc/Px5cc153/IMG-20260118-WA0016.jpg"
+        ];
+
+        const container = document.getElementById('landscape-gallery');
+        landscapeImages.forEach((link, index) => {
+            const block = document.createElement('div');
+            block.className = 'image-block';
+            block.innerHTML = `
+                <img src="${link}" loading="lazy">
+                <span class="description">تنسيق حدائق منزلية وشلالات بالأحساء - نموذج رقم ${index + 1}</span>
+                <span class="keywords">#تنسيق_حدائق_الأحساء #عشب_صناعي #شلالات_منزلية #المبرز #الهفوف</span>
+            `;
+            container.appendChild(block);
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 3000);
+    </script>
+</body>
+</html>

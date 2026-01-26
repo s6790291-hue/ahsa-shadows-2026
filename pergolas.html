@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>برجولات وجلسات حدائق الأحساء | 0544459478</title>
+    <style>
+        :root { --main-color: #8B4513; --dark: #1a1a1a; --gold: #D4AF37; --bg-light: #fdfaf5; }
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: #fff; color: #333; }
+        
+        header { background: var(--dark); padding: 15px; display: flex; align-items: center; border-bottom: 3px solid var(--main-color); position: sticky; top: 0; z-index: 1000; }
+        .back-home { background: var(--main-color); color: white; text-decoration: none; padding: 8px 15px; border-radius: 5px; font-weight: bold; }
+        .site-title { color: white; flex-grow: 1; text-align: center; font-size: 18px; }
+
+        .main-slider { width: 100%; height: 350px; position: relative; overflow: hidden; background: #000; }
+        .slide { position: absolute; width: 100%; height: 100%; opacity: 0; transition: 1s ease-in-out; }
+        .slide.active { opacity: 1; }
+        .slide img { width: 100%; height: 100%; object-fit: cover; }
+
+        .page-intro { text-align: center; padding: 30px 20px; background: var(--bg-light); }
+        .page-intro h1 { color: var(--main-color); border-bottom: 3px solid var(--gold); display: inline-block; padding-bottom: 5px; }
+
+        .content-container { width: 100%; max-width: 900px; margin: 0 auto; }
+        .image-block { margin-bottom: 40px; padding-bottom: 20px; text-align: center; border-bottom: 8px solid #f2f2f2; }
+        .image-block img { width: 100%; height: auto; display: block; border-radius: 5px; }
+        .description { font-size: 20px; font-weight: bold; color: var(--dark); margin-top: 15px; display: block; }
+        .keywords { color: var(--main-color); font-size: 14px; font-weight: bold; display: block; margin-top: 5px; }
+
+        footer { background: var(--dark); color: white; text-align: center; padding: 40px 20px; margin-top: 50px; }
+        .footer-seo { font-size: 13px; color: #aaa; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px; line-height: 1.8; }
+        .designer-name { color: var(--gold); font-weight: bold; }
+        .wa-float { position: fixed; bottom: 20px; left: 20px; background: #25d366; color: white; padding: 12px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; z-index: 2000; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+
+        @media (max-width: 600px) { .main-slider { height: 250px; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="back-home">🏠 الرئيسية</a>
+        <div class="site-title">مظلات وسواتر الأحساء</div>
+    </header>
+
+    <div class="main-slider">
+        <div class="slide active"><img src="https://i.postimg.cc/BvLPCVxh/5285107341525191428-120.jpg"></div>
+        <div class="slide"><img src="https://i.postimg.cc/htGdXjhP/5285107341525191489-120.jpg"></div>
+        <div class="slide"><img src="https://i.postimg.cc/0jdwwKpf/IMG-20260116-WA0000.jpg"></div>
+    </div>
+
+    <div class="page-intro">
+        <h1>تركيب البرجولات وجلسات الحدائق</h1>
+        <p>تصاميم عصرية للبرجولات الخشبية، الحديدية، واللكسان بأفضل الأسعار</p>
+    </div>
+
+    <div class="content-container" id="pergolas-gallery"></div>
+
+    <a href="https://wa.me/966544459478?text=استفسار عن تركيب برجولات" class="wa-float">تواصل واتساب 🟢</a>
+
+    <footer>
+        <div class="footer-seo">
+            كلمات دلالية: برجولات الأحساء، تركيب جلسات حدائق الهفوف، برجولات حديد شكل خشب، برجولات مودرن المبرز، مظلات جلسات خارجية، جلسات سطح، تركيب لكسان بالاحساء، اسعار البرجولات.
+        </div>
+        <div class="copy-right">جميع الحقوق محفوظة لمؤسسة مظلات وسواتر الأحساء © 2026</div>
+        <div>تم التصميم بواسطة: <span class="designer-name">سليمان الحكمي</span></div>
+    </footer>
+
+    <script>
+        const pergolaImages = [
+            "https://i.postimg.cc/BvLPCVxh/5285107341525191428-120.jpg", "https://i.postimg.cc/FKdkxBjC/5285107341525191429-120.jpg",
+            "https://i.postimg.cc/kghtKmtH/5285107341525191430-120.jpg", "https://i.postimg.cc/vZS6fs6C/5285107341525191431-120.jpg",
+            "https://i.postimg.cc/Z5DypSyg/5285107341525191432-120.jpg", "https://i.postimg.cc/T3HWg6WF/5285107341525191433-120.jpg",
+            "https://i.postimg.cc/rwYtxktB/5285107341525191434-120.jpg", "https://i.postimg.cc/g0XLKTv4/5285107341525191435-121.jpg",
+            "https://i.postimg.cc/jSkJPbJG/5285107341525191455-121.jpg", "https://i.postimg.cc/GmSsGCsz/5285107341525191459-120.jpg",
+            "https://i.postimg.cc/RZbnKBnX/5285107341525191460-120.jpg", "https://i.postimg.cc/nhwQBJQR/5285107341525191461-120.jpg",
+            "https://i.postimg.cc/52kFLVFK/5285107341525191462-120.jpg", "https://i.postimg.cc/QdnW13WJ/5285107341525191463-121.jpg",
+            "https://i.postimg.cc/3xbDmTDZ/5285107341525191464-121.jpg", "https://i.postimg.cc/JzdBZLBq/5285107341525191465-120.jpg",
+            "https://i.postimg.cc/jSkJPbJc/5285107341525191466-120.jpg", "https://i.postimg.cc/4xFhVghb/5285107341525191467-120.jpg",
+            "https://i.postimg.cc/7ZQT0kT1/5285107341525191468-121.jpg", "https://i.postimg.cc/fRg0mN00/5285107341525191469-120.jpg",
+            "https://i.postimg.cc/DwYbLTbJ/5285107341525191470-120.jpg", "https://i.postimg.cc/P5F8Yj8m/5285107341525191471-121.jpg",
+            "https://i.postimg.cc/cL58wS8t/5285107341525191472-120.jpg", "https://i.postimg.cc/0yHJDsJD/5285107341525191473-120.jpg",
+            "https://i.postimg.cc/sg0Z7rZS/5285107341525191474-121.jpg", "https://i.postimg.cc/dVSTrYTL/5285107341525191475-121.jpg",
+            "https://i.postimg.cc/Z5qdWR0R/5285107341525191476-119.jpg", "https://i.postimg.cc/3xwvkRW2/5285107341525191477-121.jpg",
+            "https://i.postimg.cc/VkNCJ65j/5285107341525191478-121.jpg", "https://i.postimg.cc/Cx6fkgfR/5285107341525191479-120.jpg",
+            "https://i.postimg.cc/jSj7D5Cn/5285107341525191480-120.jpg", "https://i.postimg.cc/rwprDmzr/5285107341525191481-121.jpg",
+            "https://i.postimg.cc/RZ0HWFq6/5285107341525191482-120.jpg", "https://i.postimg.cc/CxKqR1dD/5285107341525191483-121.jpg",
+            "https://i.postimg.cc/dV0yh1D0/5285107341525191484-120.jpg", "https://i.postimg.cc/8zC675sz/5285107341525191485-120.jpg",
+            "https://i.postimg.cc/SxKMnsjn/5285107341525191486-121.jpg", "https://i.postimg.cc/2S5Z163j/5285107341525191488-120.jpg",
+            "https://i.postimg.cc/htGdXjhP/5285107341525191489-120.jpg", "https://i.postimg.cc/Jzhksntr/5285107341525191524-121.jpg",
+            "https://i.postimg.cc/rwprDmzM/5289875884800150547-121.jpg", "https://i.postimg.cc/K8YM1z4F/5289875884800150548-121.jpg",
+            "https://i.postimg.cc/FHKLYR1v/5296776303811955556-121.jpg", "https://i.postimg.cc/fTCdWXWw/5296776303811955557-121.jpg",
+            "https://i.postimg.cc/NfDXGTs3/5296776303811955558-121.jpg", "https://i.postimg.cc/NfDXGTGh/5296776303811955559-121.jpg",
+            "https://i.postimg.cc/pXCjV8W7/5296776303811955565-121.jpg", "https://i.postimg.cc/7Y9zP7HK/5296776303811955576-121.jpg",
+            "https://i.postimg.cc/sDmWfSjw/5296776303811955577-121.jpg", "https://i.postimg.cc/PryDfZXK/5296776303811955578-121.jpg",
+            "https://i.postimg.cc/J4xX7Jr2/5296776303811955579-121.jpg", "https://i.postimg.cc/bNgnYbyT/5296776303811955580-119.jpg",
+            "https://i.postimg.cc/WbTrPSv6/5309895887007977395-121.jpg", "https://i.postimg.cc/MK5BZR6m/5309895887007977396-119.jpg",
+            "https://i.postimg.cc/4NstTwgF/5309895887007977398-120.jpg", "https://i.postimg.cc/bNpbjLhC/5309895887007977399-120.jpg",
+            "https://i.postimg.cc/02PmqZsV/5309895887007977400-120.jpg", "https://i.postimg.cc/pXR8tkHc/5309895887007977401-121.jpg",
+            "https://i.postimg.cc/65tRNzXz/5309895887007977402-120.jpg", "https://i.postimg.cc/TYfmXQ60/5309895887007977403-121.jpg",
+            "https://i.postimg.cc/pXR8tkHZ/5309895887007977409-119.jpg", "https://i.postimg.cc/fTDXh5Nv/5309895887007977410-121.jpg",
+            "https://i.postimg.cc/GhdY1zCY/5348356309826342726-119.jpg", "https://i.postimg.cc/X74F0xbG/5375329327215480802-121.jpg",
+            "https://i.postimg.cc/TYfmXQ6b/5375329327215480803-119.jpg", "https://i.postimg.cc/4NstTwg9/5375329327215480804-121.jpg",
+            "https://i.postimg.cc/L62fMvph/5375329327215480815-119.jpg", "https://i.postimg.cc/ncp7tTJC/5375329327215480816-119.jpg",
+            "https://i.postimg.cc/sDsSRKrB/5375329327215480817-119.jpg", "https://i.postimg.cc/gkmRP4WJ/5375329327215480818-119.jpg",
+            "https://i.postimg.cc/7Yw7yXkZ/5375329327215480821-121.jpg", "https://i.postimg.cc/xjKH7hWm/5375329327215480822-121.jpg",
+            "https://i.postimg.cc/gkmRP4Wj/5375329327215480895-121.jpg", "https://i.postimg.cc/kMx8Zzkt/5375329327215480897-121.jpg",
+            "https://i.postimg.cc/qB8nYS96/5375329327215480899-121.jpg", "https://i.postimg.cc/qB8nYS93/5375329327215480908-121.jpg",
+            "https://i.postimg.cc/8khW39q5/5375329327215480914-121.jpg", "https://i.postimg.cc/3rgp6VPr/5375329327215480915-121.jpg",
+            "https://i.postimg.cc/CMjDtXW5/5375329327215480916-119.jpg", "https://i.postimg.cc/VsjMTp3k/5375329327215480917-119.jpg",
+            "https://i.postimg.cc/RCcf8yjV/5375329327215480918-119.jpg", "https://i.postimg.cc/v8W9jkCC/5375329327215480919-119.jpg",
+            "https://i.postimg.cc/HWQ5KRfj/5377619498266988825-120.jpg", "https://i.postimg.cc/SR7MMYWX/5447603825691791332-119.jpg",
+            "https://i.postimg.cc/C5HqqnjR/5447603825691791332-121.jpg", "https://i.postimg.cc/RhQHHJc9/5447603825691791333-121.jpg",
+            "https://i.postimg.cc/nrYDD9v9/5447603825691791334-121.jpg", "https://i.postimg.cc/tJtxxnhp/5447603825691791335-121.jpg",
+            "https://i.postimg.cc/6qLvv4dB/5447603825691791336-119.jpg", "https://i.postimg.cc/hvbddQ9S/5447603825691791336-121.jpg",
+            "https://i.postimg.cc/fyhdyf0w/5447603825691791337-119.jpg", "https://i.postimg.cc/j2Q77nzS/5447603825691791337-121.jpg",
+            "https://i.postimg.cc/nrYDD9vr/5447603825691791338-121.jpg", "https://i.postimg.cc/1XcqqVpz/5447603825691791339-121.jpg",
+            "https://i.postimg.cc/8cVvcmrk/5447603825691791340-119.jpg", "https://i.postimg.cc/8cVvcmrz/5447603825691791340-121.jpg",
+            "https://i.postimg.cc/1XZFXrN5/5447603825691791341-121.jpg", "https://i.postimg.cc/Y0wF0zmS/5447603825691791342-121.jpg",
+            "https://i.postimg.cc/fyhdyfSG/5447603825691791343-121.jpg", "https://i.postimg.cc/BbGFbB1W/5447603825691791344-121.jpg",
+            "https://i.postimg.cc/wMdNMQRZ/5447603825691791345-121.jpg", "https://i.postimg.cc/D0KG0P4N/5447603825691791346-121.jpg",
+            "https://i.postimg.cc/QCr7CJK0/5447603825691791347-121.jpg", "https://i.postimg.cc/j2rf24JT/5447603825691791348-121.jpg",
+            "https://i.postimg.cc/NFwXFkrB/5447603825691791349-121.jpg", "https://i.postimg.cc/7hyzhnTq/5447603825691791350-121.jpg",
+            "https://i.postimg.cc/cCN3CBtT/5447603825691791351-121.jpg", "https://i.postimg.cc/yxzRxy3f/5447603825691791352-121.jpg",
+            "https://i.postimg.cc/0jqSj0KV/5447603825691791353-121.jpg", "https://i.postimg.cc/T1qDD5rn/b.jpg",
+            "https://i.postimg.cc/NF7HH21H/b0.jpg", "https://i.postimg.cc/hvbddQ9T/b1.jpg",
+            "https://i.postimg.cc/PJzwwvmZ/b3.jpg", "https://i.postimg.cc/0jdwwKpf/IMG-20260116-WA0000.jpg",
+            "https://i.postimg.cc/yxXZZ3FT/IMG-20260116-WA0003.jpg", "https://i.postimg.cc/J0ckkHbc/IMG-20260116-WA0004.jpg",
+            "https://i.postimg.cc/qqX3368s/IMG-20260116-WA0007.jpg"
+        ];
+
+        const container = document.getElementById('pergolas-gallery');
+        pergolaImages.forEach((link, index) => {
+            const block = document.createElement('div');
+            block.className = 'image-block';
+            block.innerHTML = `
+                <img src="${link}" loading="lazy">
+                <span class="description">تركيب برجولة حدائق في الأحساء - نموذج رقم ${index + 1}</span>
+                <span class="keywords">#برجولات_الأحساء #جلسات_خارجية #تنسيق_حدائق #الهفوف #المبرز #ديكورات_حدائق</span>
+            `;
+            container.appendChild(block);
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 3000);
+    </script>
+</body>
+</html>

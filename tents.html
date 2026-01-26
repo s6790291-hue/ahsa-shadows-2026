@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بيوت شعر وخيام الأحساء - معرض الأعمال الكامل</title>
+    <style>
+        :root { --orange: #FF8C00; --dark: #111; }
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: #fff; color: #333; }
+
+        /* الهيدر */
+        header { background: var(--dark); padding: 15px; display: flex; align-items: center; border-bottom: 3px solid var(--orange); position: sticky; top: 0; z-index: 1000; }
+        .back-home { background: var(--orange); color: white; text-decoration: none; padding: 8px 15px; border-radius: 5px; font-weight: bold; }
+        .site-title { color: white; flex-grow: 1; text-align: center; font-size: 18px; }
+
+        /* 1. السلايدر العلوي (بدون فراغات سوداء) */
+        .main-slider { width: 100%; height: 350px; position: relative; overflow: hidden; background: #000; }
+        .slide { position: absolute; width: 100%; height: 100%; opacity: 0; transition: 1s ease-in-out; }
+        .slide.active { opacity: 1; }
+        /* التعديل هنا: استخدام cover لملء الفراغات */
+        .slide img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
+        /* ترويسة */
+        .page-intro { text-align: center; padding: 30px 20px; background: #f9f9f9; }
+        .page-intro h1 { color: var(--dark); border-bottom: 3px solid var(--orange); display: inline-block; padding-bottom: 5px; margin-bottom: 10px; }
+
+        /* 2. معرض الصور (صورة ثم وصف) */
+        .content-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 0; }
+        .image-block { margin-bottom: 40px; padding-bottom: 20px; text-align: center; border-bottom: 8px solid #f0f0f0; }
+        .image-block img { width: 100%; height: auto; display: block; }
+        
+        .description { font-size: 20px; font-weight: bold; color: var(--dark); margin: 15px 15px 5px; display: block; }
+        .keywords { color: var(--orange); font-size: 14px; font-weight: bold; margin: 0 15px 15px; display: block; }
+
+        /* زر الواتساب */
+        .wa-float { position: fixed; bottom: 20px; left: 20px; background: #25d366; color: white; padding: 12px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; z-index: 2000; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+
+        footer { background: var(--dark); color: white; text-align: center; padding: 30px; }
+        
+        @media (max-width: 600px) { .main-slider { height: 250px; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="back-home">🏠 الرئيسية</a>
+        <div class="site-title">مظلات وسواتر الأحساء</div>
+    </header>
+
+    <div class="main-slider">
+        <div class="slide active"><img src="https://i.postimg.cc/FszrcJbT/IMG-20260118-WA0026.jpg"></div>
+        <div class="slide"><img src="https://i.postimg.cc/Ghfcjhqr/5426978061296538752-121.jpg"></div>
+        <div class="slide"><img src="https://i.postimg.cc/JhVM96fY/5289875884800150854-121.jpg"></div>
+    </div>
+
+    <div class="page-intro">
+        <h1>أعمال الخيام وبيوت الشعر</h1>
+    </div>
+
+    <div class="content-container" id="gallery-body">
+        </div>
+
+    <a href="https://wa.me/966544459478" class="wa-float">تواصل واتساب 🟢</a>
+
+    <script>
+        const imgLinks = [
+            "https://i.postimg.cc/VNQm3Gxh/5285107341525191507-120.jpg", "https://i.postimg.cc/MG2qhPCr/5285107341525191508-120.jpg",
+            "https://i.postimg.cc/bvcpKC7W/5285107341525191510-120.jpg", "https://i.postimg.cc/tgQpLSKK/5285107341525191511-120.jpg",
+            "https://i.postimg.cc/T3WTNM49/5289875884800150813-120.jpg", "https://i.postimg.cc/K8gmpSHd/5289875884800150814-121.jpg",
+            "https://i.postimg.cc/rwtqZXPQ/5289875884800150815-119.jpg", "https://i.postimg.cc/zfZ89tst/5289875884800150816-121.jpg",
+            "https://i.postimg.cc/52FfKdRG/5289875884800150817-121.jpg", "https://i.postimg.cc/g26GtFTC/5289875884800150818-121.jpg",
+            "https://i.postimg.cc/zGRq2Zcd/5289875884800150820-121.jpg", "https://i.postimg.cc/QdWjYGy4/5289875884800150821-121.jpg",
+            "https://i.postimg.cc/nhQnSbW8/5289875884800150822-121.jpg", "https://i.postimg.cc/NjrQCqz2/5289875884800150824-121.jpg",
+            "https://i.postimg.cc/YCmtDKsm/5289875884800150825-121.jpg", "https://i.postimg.cc/Dwb7pkMQ/5289875884800150828-121.jpg",
+            "https://i.postimg.cc/Dwb7pkMG/5289875884800150830-119.jpg", "https://i.postimg.cc/Gmsbgw5x/5289875884800150832-121.jpg",
+            "https://i.postimg.cc/pXS2BXqY/5289875884800150833-120.jpg", "https://i.postimg.cc/2SBC9RK4/5289875884800150835-119.jpg",
+            "https://i.postimg.cc/8zrTXQ0M/5289875884800150836-121.jpg", "https://i.postimg.cc/nLbp6Ry3/5289875884800150842-121.jpg",
+            "https://i.postimg.cc/JhVM96fY/5289875884800150854-121.jpg", "https://i.postimg.cc/N0qBWJ3z/5289875884800150857-121.jpg",
+            "https://i.postimg.cc/0NRPLWTt/5289875884800150864-121.jpg", "https://i.postimg.cc/c4zsc4XB/5348356309826342778-121.jpg",
+            "https://i.postimg.cc/gk7YKkNw/5348356309826342780-121.jpg", "https://i.postimg.cc/yYGVTYv0/5348356309826342782-121.jpg",
+            "https://i.postimg.cc/dtfq9t4R/5348356309826342783-121.jpg", "https://i.postimg.cc/yYx19SXN/5377619498266989145-121-edit-952924069543934.jpg",
+            "https://i.postimg.cc/c4CxY8Ms/5377619498266989146-119-edit-952903789381129.jpg", "https://i.postimg.cc/dtfq9t4D/5426978061296538685-120.jpg",
+            "https://i.postimg.cc/X7PVg7QY/5426978061296538748-120.jpg", "https://i.postimg.cc/4N0J1NB4/5426978061296538750-120.jpg",
+            "https://i.postimg.cc/Ghfcjhqr/5426978061296538752-121.jpg", "https://i.postimg.cc/YqPpxqbM/5426978061296538753-120.jpg",
+            "https://i.postimg.cc/qMFkGMjk/5426978061296538754-121.jpg", "https://i.postimg.cc/VLvfMbBw/5426978061296538755-121.jpg",
+            "https://i.postimg.cc/7YhH7TMY/5426978061296538756-121.jpg", "https://i.postimg.cc/J4F1Q4PV/5426978061296538757-120.jpg",
+            "https://i.postimg.cc/yYx19SX8/IMG-20260118-WA0000.jpg", "https://i.postimg.cc/m2kLMF36/IMG-20260118-WA0017.jpg",
+            "https://i.postimg.cc/yYx19Sh2/IMG-20260118-WA0018.jpg", "https://i.postimg.cc/4Nyfthvq/IMG-20260118-WA0019.jpg",
+            "https://i.postimg.cc/9F0mTqtc/IMG-20260118-WA0020.jpg", "https://i.postimg.cc/7YhH7T1R/IMG-20260118-WA0021.jpg",
+            "https://i.postimg.cc/J40rJB3K/IMG-20260118-WA0022.jpg", "https://i.postimg.cc/qMqJnCcj/IMG-20260118-WA0024.jpg",
+            "https://i.postimg.cc/Yq0rgmNX/IMG-20260118-WA0025.jpg", "https://i.postimg.cc/FszrcJbT/IMG-20260118-WA0026.jpg",
+            "https://i.postimg.cc/zXQJkX0q/IMG-20260118-111742.jpg", "https://i.postimg.cc/yYGVTYvC/slider2.jpg"
+        ];
+
+        const container = document.getElementById('gallery-body');
+        imgLinks.forEach((link, index) => {
+            const block = document.createElement('div');
+            block.className = 'image-block';
+            block.innerHTML = `
+                <img src="${link}" loading="lazy">
+                <span class="description">تنفيذ بيت شعر ملكي - الأحساء - صورة ${index + 1}</span>
+                <span class="keywords">#خيام_الأحساء #بيوت_شعر #تجهيز_تراثي</span>
+            `;
+            container.appendChild(block);
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 3000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تركيب قرميد بالأحساء | 0544459478</title>
+    <style>
+        :root { --brick-color: #A52A2A; --dark: #1a1a1a; --gold: #DAA520; --bg-light: #fff5f5; }
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: #fff; color: #333; }
+        
+        header { background: var(--dark); padding: 15px; display: flex; align-items: center; border-bottom: 3px solid var(--brick-color); position: sticky; top: 0; z-index: 1000; }
+        .back-home { background: var(--brick-color); color: white; text-decoration: none; padding: 8px 15px; border-radius: 5px; font-weight: bold; }
+        .site-title { color: white; flex-grow: 1; text-align: center; font-size: 18px; }
+
+        .main-slider { width: 100%; height: 350px; position: relative; overflow: hidden; background: #000; }
+        .slide { position: absolute; width: 100%; height: 100%; opacity: 0; transition: 1s ease-in-out; }
+        .slide.active { opacity: 1; }
+        .slide img { width: 100%; height: 100%; object-fit: cover; }
+
+        .page-intro { text-align: center; padding: 30px 20px; background: var(--bg-light); }
+        .page-intro h1 { color: var(--brick-color); border-bottom: 3px solid var(--gold); display: inline-block; padding-bottom: 5px; }
+
+        .content-container { width: 100%; max-width: 900px; margin: 0 auto; }
+        .image-block { margin-bottom: 40px; padding-bottom: 20px; text-align: center; border-bottom: 8px solid #f9f0f0; }
+        .image-block img { width: 100%; height: auto; display: block; border-radius: 4px; }
+        .description { font-size: 20px; font-weight: bold; color: var(--dark); margin-top: 15px; display: block; }
+        .keywords { color: #888; font-size: 14px; font-weight: bold; display: block; margin-top: 5px; }
+
+        footer { background: var(--dark); color: white; text-align: center; padding: 40px 20px; margin-top: 50px; }
+        .footer-seo { font-size: 13px; color: #aaa; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 20px; line-height: 1.8; }
+        .designer-name { color: var(--gold); font-weight: bold; }
+        .wa-float { position: fixed; bottom: 20px; left: 20px; background: #25d366; color: white; padding: 12px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; z-index: 2000; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+
+        @media (max-width: 600px) { .main-slider { height: 250px; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="back-home">🏠 الرئيسية</a>
+        <div class="site-title">مظلات وسواتر الأحساء</div>
+    </header>
+
+    <div class="main-slider">
+        <div class="slide active"><img src="https://i.postimg.cc/fLy25ZH3/5447603825691790814-119.jpg"></div>
+        <div class="slide"><img src="https://i.postimg.cc/XJqHx32M/5447603825691790822-121.jpg"></div>
+        <div class="slide"><img src="https://i.postimg.cc/ydxQnBfC/5447603825691790825-121.jpg"></div>
+    </div>
+
+    <div class="page-intro">
+        <h1>تركيب قرميد وملاحق</h1>
+        <p>تركيب كافة أنواع القرميد (إسباني، إيطالي، وطني) للمنازل والملاحق والبيوت الشعرية</p>
+    </div>
+
+    <div class="content-container" id="tile-gallery"></div>
+
+    <a href="https://wa.me/966544459478?text=استفسار عن تركيب قرميد" class="wa-float">تواصل واتساب 🟢</a>
+
+    <footer>
+        <div class="footer-seo">
+            كلمات دلالية: قرميد الأحساء، تركيب قرميد الهفوف، قرميد ملاحق، اسعار القرميد بالاحساء، قرميد معدني، قرميد فخاري المبرز، عزل أسطح، مقاول قرميد.
+        </div>
+        <div class="copy-right">جميع الحقوق محفوظة لمؤسسة مظلات وسواتر الأحساء © 2026</div>
+        <div>تم التصميم بواسطة: <span class="designer-name">سليمان الحكمي</span></div>
+    </footer>
+
+    <script>
+        const tileImages = [
+            "https://i.postimg.cc/fLy25ZH3/5447603825691790814-119.jpg", "https://i.postimg.cc/FRzWGmPY/5447603825691790814-121.jpg",
+            "https://i.postimg.cc/SsRTVqZQ/5447603825691790818-121.jpg", "https://i.postimg.cc/PxJ3Kh6q/5447603825691790819-121.jpg",
+            "https://i.postimg.cc/wvMfFHWd/5447603825691790820-121.jpg", "https://i.postimg.cc/B6bYNsh0/5447603825691790821-121.jpg",
+            "https://i.postimg.cc/XJqHx32M/5447603825691790822-121.jpg", "https://i.postimg.cc/ydxQnBfC/5447603825691790825-121.jpg"
+        ];
+
+        const container = document.getElementById('tile-gallery');
+        tileImages.forEach((link, index) => {
+            const block = document.createElement('div');
+            block.className = 'image-block';
+            block.innerHTML = `
+                <img src="${link}" loading="lazy">
+                <span class="description">تركيب قرميد في الأحساء - نموذج رقم ${index + 1}</span>
+                <span class="keywords">#قرميد_الأحساء #تركيب_قرميد #قرميد_ملاحق #الهفوف #المبرز #ديكور_أسطح</span>
+            `;
+            container.appendChild(block);
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 3000);
+    </script>
+</body>
+</html>
